@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Jewel Crush</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+		<div class="gameWelcome">			
+			<h1>Jewel Crush</h1>
+			<br>
+			<input style="display: none;" type="text" id="name">
+				<button id="buttonStart" type="button" class="btn btn-outline-danger btn-lg"> >> START GAMES << </button>
+		</div>
+		<div class="countDown">
+			<h1> Game Start </h1>
+		</div>
+		<div class="gameDashboard">
+			<div>
+				<h3 style="float: left">Point : <span id="playerPoint"></span></h3>
+				<h3 class="coverPlayerTime" style="float: right">Time : <span id="playerTime">0</span></h3>
+				<h3 align="center" class="playAgain"><button>Play Again</button></h3>
+			</div>
+		<br>
+			<table class="gameDisplay">
+				<tbody>
+					<!--
+					<tr>
+						<td id="column">
+							<img datay="1" datax="1" dataimage="1" id="11" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/1.png">
+						</td>
+						<td id="column">
+							<img datay="1" datax="2" dataimage="2" id="12" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/2.png">
+						</td>
+						<td id="column">
+							<img datay="1" datax="3" dataimage="3" id="13" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/3.png">
+						</td>
+						<td id="column">
+							<img datay="1" datax="4" dataimage="4" id="14" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/4.png">
+						</td>
+						<td id="column">
+							<img datay="1" datax="5" dataimage="5" id="15" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/5.png">
+						</td>
+					</tr>
+
+					<tr>
+						<td id="column">
+							<img datay="2" datax="1" dataimage="1" id="21" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/1.png">
+						</td>
+						<td id="column">
+							<img datay="2" datax="2" dataimage="2" id="22" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/2.png">
+						</td>
+						<td id="column">
+							<img datay="2" datax="3" dataimage="3" id="23" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/3.png">
+						</td>
+						<td id="column">
+							<img datay="2" datax="4" dataimage="4" id="24" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/4.png">
+						</td>
+						<td id="column">
+							<img datay="2" datax="5" dataimage="5" id="25" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/5.png">
+						</td>
+					</tr>
+
+					<tr>
+						<td id="column">
+							<img datay="3" datax="1" dataimage="1" id="31" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/1.png">
+						</td>			
+						<td id="column">
+							<img datay="3" datax="2" dataimage="2" id="32" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/2.png">
+						</td>
+						<td id="column">
+							<img datay="3" datax="3" dataimage="3" id="33" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/3.png">
+						</td>
+						<td id="column">
+							<img datay="3" datax="4" dataimage="4" id="34" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/4.png">
+						</td>
+						<td id="column">
+							<img datay="3" datax="5" dataimage="5" id="35" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/5.png">
+						</td>
+					</tr>
+
+					<tr>
+						<td id="column">
+							<img datay="4" datax="1" dataimage="1" id="41" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/1.png">
+						</td>
+						<td id="column">
+							<img datay="4" datax="2" dataimage="2" id="42" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/2.png">
+						</td>
+						<td id="column">
+							<img datay="4" datax="3" dataimage="3" id="43" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/3.png">
+						</td>
+						<td id="column">
+							<img datay="4" datax="4" dataimage="4" id="44" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/4.png">
+						</td>
+						<td id="column">
+							<img datay="4" datax="5" dataimage="5" id="45" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/5.png">
+						</td>
+					</tr>
+
+					<tr>
+						<td id="column">
+							<img datay="5" datax="1" dataimage="1" id="51" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/1.png">
+						</td>
+						<td id="column">
+							<img datay="5" datax="2" dataimage="2" id="52" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/2.png">
+						</td>
+						<td id="column">
+							<img datay="5" datax="3" dataimage="3" id="53" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/3.png">
+						</td>
+						<td id="column">
+							<img datay="5" datax="4" dataimage="4" id="54" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/4.png">
+						</td>
+						<td id="column">
+							<img datay="5" datax="5" dataimage="5" id="55" ondragstart="Game.onDragStart(event)" ondragover="event.preventDefault()" ondrop="Game.onDragEnd(event)" src="images/5.png">
+						</td>
+					</tr>
+					-->
+				</tbody>
+			</table>
+		</div>
+
+	<script src="jquery-3.1.0.js"></script>
+	<script src="main.js"></script>
+	
+	</body>
+</html>
